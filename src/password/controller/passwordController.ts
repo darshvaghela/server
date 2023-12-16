@@ -1,5 +1,5 @@
 import express from "express";
-import { body, validationResult, ValidationChain } from "express-validator";
+import { body, validationResult } from "express-validator";
 import { publicRequest } from "../../middleware/publicRequest";
 import * as passwordService from "../service/passwordService";
 import { IPassword } from "../../type/password";
@@ -43,6 +43,7 @@ router.post(
       res.status(200).json({
         password: newPassword,
       });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.log(error);
       res.status(500).json({

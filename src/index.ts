@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import express from "express";
+const connectToMongo = require("./db");
 import cors from "cors";
 import path from "path";
 
@@ -13,7 +15,10 @@ app.get("/", (req, res) => {
 });
 
 app.use("/password", require("./password/controller/passwordController"));
+app.use("/url", require("./urlShortener/controller/urlShortenerController"));
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
+
+connectToMongo();
