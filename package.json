@@ -28,6 +28,6 @@
     "express-validator": "^7.0.1",
     "mongoose": "^8.0.3",
     "save-dev": "^0.0.1-security",
-    "ts-node": "^10.9.1",
+    "ts-node": "^10.9.1"
   }
 }
