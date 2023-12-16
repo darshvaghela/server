@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 import express from "express";
 const connectToMongo = require("./db");
 import cors from "cors";
@@ -20,5 +19,4 @@ app.use("/url", require("./urlShortener/controller/urlShortenerController"));
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
-
 connectToMongo();
